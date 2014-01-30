@@ -4,3 +4,8 @@
 // page or follow along with the examples in the book.
 //
 // See README.txt for more information.
+
+$(document).ready(function() {
+	$('#selected-plays > li').addClass('horizontal');	//使得页面之中ul > li部分, 不再纵向排列; 而保持横向排列
+	$('#selected-plays li:not(.horizontal)').addClass('sub-level');	//让所有非顶级的li拥有背景色
+});
