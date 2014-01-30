@@ -6,6 +6,6 @@
 // See README.txt for more information.
 
 $(document).ready(function() {
-	$('#selected-plays > li').addClass('horizontal');	//使得页面之中ul > li部分, 不再纵向排列; 而保持横向排列
-	$('#selected-plays li:not(.horizontal)').addClass('sub-level');	//让所有非顶级的li拥有背景色
+	$('#selected-plays > li').addClass('horizontal');	//''>'子元素组合符. 使得页面之中ul > li部分, 不再纵向排列; 而保持横向排列
+	$('#selected-plays li:not(.horizontal)').addClass('sub-level');	//':not()'否定类选择符. 让所有非顶级的li拥有背景色
 });
