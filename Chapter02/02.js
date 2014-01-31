@@ -36,7 +36,13 @@ $(document).ready(function() {
 	/*
 		表单元素的选择符, 例如:
 		$('input[type="radio"]:checked')
-		$('input[type="password"], input[type="text"]:disabled')
+		$('input[type="password"], input[type="text"]:disabled') 
 	 */
-
 })
+
+/*
+	访问DOM元素
+		var myTag = $('#my-element').get(0).tagName;
+	等价于
+		var myTag = $('#my-element')[0].tagName;
+ */
