@@ -6,18 +6,20 @@
 // See README.txt for more information.
 
 $(document).ready(function() {
+	//为三个按钮添加显示/隐藏的功能
+	//更好的用户提前情况是, 鼠标hover该元素时候就进行显示, 鼠标离开的时候就不再进行显示, 因此进行代码改写
+	$('#switcher').click(function(event) {
+		$('#switcher button').toggleClass('hidden');
+	});
+});
 
+$(document).ready(function() {
 	$('#switcher-default').addClass('selected');
-	//进一步重构程序
-	$('#switcher button').on('click', function(){
+	$('#switcher button').click(function(event) {
 		var bodyClass = this.id.split('-')[1];
 		$('body').removeClass().addClass(bodyClass);
 		$('#switcher button').removeClass('selected');
 		$(this).addClass('selected');
-	});
-
-	//为三个按钮添加显示/隐藏的功能
-	$('#switcher h3').click(function() {
-		$('#switcher button').toggleClass('hidden');
+		event.stopPropagation();
 	});
 });
