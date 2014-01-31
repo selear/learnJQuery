@@ -51,4 +51,23 @@ $(document).ready(function() {
 		等价于
 		var myTag = $('#my-element')[0].tagName;
  	*/
+
+	/*
+		第二章练习
+	*/
+	// 1.给位于嵌套列表第二层次的所有<li>元素添加special类
+	$('ul>li>ul>li').addClass('special');
+
+	// 2.给位于表格第三列的所有单元格添加year类
+	$('tr').find('td:eq(2)').addClass('year');
+
+	// 3.为表格中包含文本'Tragedy'的第一行添加special类
+	$('td:contains(Tragedy):eq(0)').addClass('special');
+
+	// *4.选择包含链接(<a>)的所有列表项(<li>), 为每个选中的列表项的同辈列表元素添加afterlink类
+	$('li>a').parent().parent().children().addClass('afterlink');
+	//$('li').find('a').parent().parent().children().addClass('afterlink');
+
+	// 5.为与.pdf链接最接近的祖先元素<ul>添加tragedy类
+	$('a[href$=".pdf"]').parent().parent().addClass('tragedy');
 });
