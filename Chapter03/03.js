@@ -15,18 +15,19 @@ $(document).ready(function() {
 	$('#switcher-default').addClass('selected').on('click', function() { //在页面出现之后, 表示该状态已经被选中; 点击之后, 先清除所有selected的样式, 再给选中的按钮添加selected类
 		$('body').removeClass('narrow');
 		$('body').removeClass('large');
-		$('#switcher button').removeClass('selected');
-		$(this).addClass('selected');
 	});
 	$('#switcher-narrow').on('click', function() {
 		$('body').addClass('narrow');
 		$('body').removeClass('large');
-		$('#switcher button').removeClass('selected');
-		$(this).addClass('selected');
 	});
 	$('#switcher-large').on('click', function() {
 		$('body').removeClass('narrow');
 		$('body').addClass('large');
+		
+	});
+
+	//三个按钮之中清除按钮selected类, 当前选中按钮添加类工作提取出来作为单独的函数用于使用
+	$('#switcher button').on('click', function(){
 		$('#switcher button').removeClass('selected');
 		$(this).addClass('selected');
 	});
