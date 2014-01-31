@@ -15,4 +15,9 @@ $(document).ready(function() {
 		$('#switcher button').removeClass('selected');
 		$(this).addClass('selected');
 	});
+
+	//为三个按钮添加显示/隐藏的功能
+	$('#switcher h3').click(function() {
+		$('#switcher button').toggleClass('hidden');
+	});
 });
