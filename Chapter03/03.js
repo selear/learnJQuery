@@ -4,3 +4,22 @@
 // page or follow along with the examples in the book.
 //
 // See README.txt for more information.
+
+$(document).ready(function() {
+	/*
+		处理简单事件, 启用页面上的三个按钮
+		通过点击页面上不同的按钮, 是的页面呈现不同的样式
+	*/
+	$('#switcher-default').on('click', function() {
+		$('body').removeClass('narrow');
+		$('body').removeClass('large');
+	});
+	$('#switcher-narrow').on('click', function() {
+		$('body').addClass('narrow');
+		$('body').removeClass('large');
+	});
+	$('#switcher-large').on('click', function() {
+		$('body').removeClass('narrow');
+		$('body').addClass('large');
+	});
+});
