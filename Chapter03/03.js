@@ -25,4 +25,10 @@ $(document).ready(function() { //为点击按钮添加功能, 是的点击按钮
 			$('#switcher button').toggleClass('hidden');
 		}
 	});
+
+	//希望页面样在样式narrow和large的情况下, 点击#switcher不进行按钮的隐藏, 使用.off()方法
+	$('#switcher-narrow, #switcher-large').click(function() {
+		$('#switcher').off('click');
+	});
+	
 });
