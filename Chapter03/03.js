@@ -21,6 +21,8 @@ $(document).ready(function() { //为点击按钮添加功能, 是的点击按钮
 			$('body').removeClass().addClass(bodyClass);
 			$('#switcher button').removeClass('selected');
 			$(event.target).addClass('selected');
+		} else {
+			$('#switcher button').toggleClass('hidden');
 		}
 	});
 });
