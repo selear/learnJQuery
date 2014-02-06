@@ -13,6 +13,14 @@ $(document).ready(function() { //鼠标移动到'#switcher'上面之后, 提高�
 	});
 });
 
+$(document).ready(function() { //屏蔽点击的按钮, 不增加hidden的class
+	$('#switcher').click(function(event) {
+		if (!$(event.target).is('button')) {
+			$('#switcher button').toggleClass('hidden');
+		}
+	});
+});
+
 $(document).ready(function() { //为点击按钮添加功能, 是的点击按钮之后能够切换样式
 	$('#switcher-default').addClass('selected');
 	$('#switcher').on('click.collapse', function(event) {
@@ -21,8 +29,6 @@ $(document).ready(function() { //为点击按钮添加功能, 是的点击按钮
 			$('body').removeClass().addClass(bodyClass);
 			$('#switcher button').removeClass('selected');
 			$(event.target).addClass('selected');
-		} else {
-			$('#switcher button').toggleClass('hidden'); //屏蔽点击的按钮, 不增加hidden的class
 		}
 	});
 
