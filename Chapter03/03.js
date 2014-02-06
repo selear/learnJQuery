@@ -30,4 +30,5 @@ $(document).ready(function() { //为点击按钮添加功能, 是的点击按钮
 	$('#switcher-narrow, #switcher-large').click(function() {
 		$('#switcher').off('click.collapse');
 	});
+	
 });
